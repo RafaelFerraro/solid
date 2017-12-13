@@ -32,7 +32,14 @@ end
 
 ###
 
+class ShapesInterface
+  def calculate
+    fail NotImplementedError
+  end
+end
+
 class Square
+  include ShapesInterface
   attr_reader :length
 
   def initialize(length)
@@ -45,6 +52,7 @@ class Square
 end
 
 class Circle
+  include ShapesInterface
   attr_reader :radius
 
   def initialize(radius)
