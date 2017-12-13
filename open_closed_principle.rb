@@ -64,6 +64,6 @@ class SumTotalArea
   end
 
   def sum
-    shapes.map(&:calculate)
+    shapes.map(&:calculate).reduce(:+)
   end
 end
